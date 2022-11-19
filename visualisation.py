@@ -76,8 +76,6 @@ def tsnescatterplot(model, word, list_names):
    plt.title('t-SNE visualization for {}'.format(word.title()))
 
 
-import matplotlib.pyplot as plt
-import numpy as np
 
 def test_plot():
     arr = np.random.normal(1, 1, size=100)

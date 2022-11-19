@@ -23,7 +23,6 @@ st.write('The current serach term is: ', title)
 visualisation.test_plot()
 
 
-
 #tsnescatterplot(w2v_model, 'Kaufmann', [i[0] for i in w2v_model.most_similar(negative=["Kaufmann"])])
 
 # plot columns

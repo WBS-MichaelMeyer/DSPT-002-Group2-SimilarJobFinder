@@ -4,6 +4,8 @@ import pandas as pd  # For data handling
 # visualisation
 import visualisation
 import matplotlib.pyplot as plt
+import gensim
+from gensim.models import Word2Vec
 
 
 # import data
@@ -12,6 +14,10 @@ path = 'https://drive.google.com/uc?export=download&id='+url.split('/')[-2]
 df = pd.read_csv(path, sep = '\t')
 
 
+#w2v_model = Word2Vec.load("word2vec.model")
+#w2v_model.init_sims(replace=True)
+
+#st.write(w2v_model.wv.most_similar(positive=["science"]))
 # APP Structure
 # header
 st.image("header.png")
@@ -20,10 +26,7 @@ title = st.text_input('Enter one search term', 'Data Science')
 st.write('The current serach term is: ', title)
 
 
-visualisation.test_plot()
-
-
-#tsnescatterplot(w2v_model, 'Kaufmann', [i[0] for i in w2v_model.most_similar(negative=["Kaufmann"])])
+#visualisation.tsnescatterplot(w2v_model, 'Kaufmann', [i[0] for i in w2v_model.wv.most_similar(negative=["Kaufmann"])])
 
 # plot columns
 col1, col2 = st.columns(2)
